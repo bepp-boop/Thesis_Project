@@ -1,0 +1,18 @@
+- name: First script
+  uses: actions/github-script@v6
+  env:
+    NAME: ${{ inputs.name }}
+  with:
+    script: console.log("Hello $NAME")
+
+- name: Second script
+  uses: actions/github-script@v6
+  env: 
+    PASSWORD: ${{ inputs.password }}
+  with:
+    script: console.log(`Hello ${process.env.PASSWORD}`)
+
+- name: Third script
+  uses: actions/github-script@v6
+  with:
+    script: console.log('And here is the third script')

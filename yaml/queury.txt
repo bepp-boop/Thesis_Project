@@ -1,0 +1,32 @@
+(
+  (block_mapping_pair
+    key: (flow_node
+      (plain_scalar
+        (string_scalar) @key))
+    value: (block_node) @value)
+     (#match? @key "^with$")
+     (#match? @value "\\$\\{\\{\\s*inputs\\.name\\s*\\}\\}")
+)
+
+give you 
+with:
+    script: console.log('Hello ${{ inputs.name }}')
+    	
+
+(
+  (block_mapping_pair
+	key: (flow_node
+  	(plain_scalar
+    	(string_scalar) @key))
+	value: (flow_node
+  	(plain_scalar
+    	(string_scalar) @value)))
+    	(#match? @value "\\$\\{\\{\\s*inputs\\.name\\s*\\}\\}")
+)
+
+give you 
+    script: console.log('Hello ${{ inputs.name }}')
+
+
+(#match? @value "\\$\\{\\{\\s*inputs\\.name\\s*\\}\\}")
+The issues with this query are that it is only able to detect the value with the inputs.name 

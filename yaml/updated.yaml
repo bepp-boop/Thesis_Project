@@ -1,0 +1,16 @@
+- name: First script
+  uses: actions/github-script@v6
+  with:
+    script: console.log('Hello ${{ inputs.name }}')
+
+- name: Second script
+  uses: actions/github-script@v6
+  with:
+    script: console.log('This is the second script')
+
+- name: Third script
+  uses: actions/github-script@v6
+  with:
+    script: console.log(\"Hello \${process.env.NAME}\")
+  env:
+    NAME:${{ inputs.name }}

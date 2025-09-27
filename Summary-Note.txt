@@ -1,0 +1,11 @@
+ast-grep: This is an attempt to work on the CLI system locally, as ast-grep is function similar to an indidepdence software different from typical go or python package. It is attempt to set up the enviroment and config for the local laptop for testing it. It is based on the idea of using this cli as a middle man to system to lint and replace the part after the intial scan. Testing of the query system was mostly done in playground as the document of ast-grep local system is a bit confusing.
+
+parsertest: This is earlist attempt to work in Go and trying to learn how parse function. It mostly to build understanding how static analysis is done as well as way to reflect on the supervisor ades abstraction and function purpose. It cease after a bit of understand of GO and parser is built and move into trying different package system that is more fitted for yaml specificlly, this was with 2 different package of tree-sitter-yaml type. One is official but just been release while the other has been develope for a while
+
+yaml:This one is focus on query the whole yaml file to detect any
+"with:script: console.log('Hello ${{inputs.name }}')". This logic is as with: it will come along script with are the result of execuatble code. From there another scan is done to look for the interpolation section. This was done manually pattern scan := `\$\{\{ [^\}]+ \}\}`. This allow access to the input.name and can be done. This was stop after trying to scaling it become a bit too complex and attempt to looking around for different grammar as a way to limit the amonut of false positive as well as one that make yaml linting a bit more convience. Code replacement was also attempt with some success. This was also the older package not the official one.
+
+tree-sitter-test: official package used, Forcus on the unmarshall and detecing codebased from different language found in yaml. This is mostly attempt to work on the finding code in yaml that is from Go itself and try to change it. Successfully change the function value for Go. As this package have small differences in it function, working between the two proof to be a bit of struggle in translativng between one to the other.
+
+
+

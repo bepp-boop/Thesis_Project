@@ -1,0 +1,5 @@
+- name: Example step
+  uses: actions/github-script@v6
+  with:
+    script: console.log('Hello ${{ inputs.name }}')
+  

@@ -1,0 +1,6 @@
+ruleDirs:
+- /home/quang/Desktop/Thesis Project/ast-grep/rules
+testConfigs:
+- testDir: /home/quang/Desktop/Thesis Project/ast-grep/rule-tests
+utilDirs:
+- /home/quang/Desktop/Thesis Project/ast-grep/utils
